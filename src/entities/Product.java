@@ -1,0 +1,24 @@
+package entities;
+
+public class Product {
+	public String name;
+	public double price;
+	public int quantity;
+	
+	public double valueInStock() {
+		return (price*quantity);
+	}
+	
+	public void addProducts(int quantity) {
+		this.quantity += quantity;
+	}
+	
+	public void removeProducts(int quantity) {
+		this.quantity -= quantity;
+	}
+	/*Pode se usar String.format para formatar tipo printf*/
+	public String toString() {
+		return (name + ", " + price + "R$, " + quantity + " Units, Total: " + valueInStock() + "R$");
+	}
+
+}
